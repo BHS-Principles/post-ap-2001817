@@ -7,7 +7,7 @@ onEvent("hi","click", function(e){
 
 
 onEvent("id", "event", function() {
-  // code aaaaaaaaaaaa
+  // code 12345
 });
 
 setParent("child", "parent");
