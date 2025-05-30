@@ -1,6 +1,8 @@
-thing1 = "a"
-thing2 = "b"
+var list = [];
 
-var list = [thing1, thing2];
+//var temp = document.getElementById("");
+//var target = document.getElementById("");
 
-//button = document.getElementById("");
+//var card = temp.querySelector("");
+
+//for(){}
