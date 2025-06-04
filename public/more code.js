@@ -2,19 +2,15 @@ var TEMP = document.getElementById("temp");
 var TARGET = document.getElementById("target");
 var CARD = temp.querySelector("card");
 
-for(var i = 0; i < 52; i++){
-    var cardCopy = CARD.cloneNode(true);
 
-    cardCopy.innerHTML = "silver " + i;
-    cardCopy.style.backgroundPositionX = -(i) + "00%";
-    EventTarget.append(cardCopy)
-}
+
 
 class Card{
     constructor(num){
         this.id = num;
-        this.suit = num;
-        this.value = num;
+        this.suit = Math.floor(num / 13);
+        this.value = num % 13;
+
         
     }
     getsuit(){return suit}
@@ -55,7 +51,9 @@ function shuffleDeck(deck){
     }
 }
 
-var CARDS = createDeck(52);
-shuffleDeck(CARDS);
-console.log(CARDS);
-DECK[0].draw();
+//var CARDS = createDeck(52);
+//shuffleDeck(CARDS);
+//console.log(CARDS);
+//DECK[0].draw();
+//DECK[1].draw();
+//DECK[2].draw();
