@@ -3,13 +3,19 @@ var TARGET = document.getElementById("target");
 var CARD = temp.querySelector("card");
 
 
-
+class Player{
+    constructor(name, num){
+        this.name = name;
+        this.cards = num;
+    }
+}
 
 class Card{
     constructor(num){
         this.id = num;
         this.suit = Math.floor(num / 13);
         this.value = num % 13;
+        this.png = document.sib
 
         
     }
@@ -29,6 +35,22 @@ class Card{
         cardCopy.style.backgroundPositionX = -(this.id) + "00%";
         cardCopy.style.backgroundPositionY = -(this.id / 13) + "00%";
         TARGET.append(cardCopy);
+    }
+}
+
+class Deck{
+    constructor(num){
+        this.cardCount = num;
+        this.cards = [];
+        make();
+    }
+    make(){
+        var deck = [];
+
+        for(var i = 0; i > howMany; i++){
+            var card = new Card(i);
+            deck.push(card);
+        }
     }
 }
 
@@ -54,6 +76,6 @@ function shuffleDeck(deck){
 //var CARDS = createDeck(52);
 //shuffleDeck(CARDS);
 //console.log(CARDS);
-//DECK[0].draw();
-//DECK[1].draw();
-//DECK[2].draw();
+//CARDS[0].draw();
+//CARDS[1].draw();
+//CARDS[2].draw();
