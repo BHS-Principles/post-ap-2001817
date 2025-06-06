@@ -3,6 +3,12 @@ var TARGET = document.getElementById("target");
 var CARD = temp.querySelector("card");
 
 
+class Game{
+    constructor(){
+        
+    }
+}
+
 class Player{
     constructor(name, num){
         this.name = name;
@@ -45,12 +51,15 @@ class Deck{
         make();
     }
     make(){
-        var deck = [];
-
-        for(var i = 0; i > howMany; i++){
+        for(var i = 0; i > this.cardCount; i++){
             var card = new Card(i);
-            deck.push(card);
+            this.cards.push(card);
         }
+        return this.cards;
+    }
+
+    shuffle(){
+
     }
 }
 
