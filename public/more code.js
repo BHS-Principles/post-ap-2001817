@@ -4,18 +4,24 @@ var CARD = temp.querySelector("card");
 
 
 class Game{
-    constructor(){
-        
+    constructor(players, deck){
+        this.state = {}
+        this.players = players;
+        this.deck = deck;
+
+        this.play();
+    }
+
+    function play(){
+        alert("fun")
     }
 }
-
 class Player{
     constructor(name, num){
         this.name = name;
         this.cards = num;
     }
 }
-
 class Card{
     constructor(num){
         this.id = num;
@@ -43,7 +49,6 @@ class Card{
         TARGET.append(cardCopy);
     }
 }
-
 class Deck{
     constructor(num){
         this.cardCount = num;
@@ -69,7 +74,6 @@ function createDeck(num){
 
     return deck
 }
-
 function shuffleDeck(deck){
     for (var i = 0; i < deck.length; i++){
         //swap places of lots of cards (at random)
