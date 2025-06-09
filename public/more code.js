@@ -12,7 +12,7 @@ class Game{
         this.play();
     }
 
-    function play(){
+    play(){
         alert("fun")
     }
 }
